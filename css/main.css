@@ -1,0 +1,112 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(to bottom, white, rgb(217, 147, 147)) no-repeat;
+    min-height: 100vh;
+}
+#header{
+    display: flex;
+    background-color: rgba(236, 77, 77, 0.945);
+    justify-content: space-between;
+    position: fixed;
+    width: 100vw;
+    min-height: 50px;
+    align-items: center;
+}
+#header .nav__one{
+    display: flex;
+    flex: 3;
+}
+#header .nav__two{
+    display: flex;
+    flex: 1;
+}
+.nav__one .nav__one--list{
+    display: flex;
+    list-style: none;
+}
+.nav__one--list .nav__one--item{
+    padding: 0 16px;
+}
+.nav__one--item a{
+    text-decoration: none;
+    color: #fff;
+}
+.nav__two .nav__two--item{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0 16px;
+    line-height: 50px;
+}
+.nav__two--item a{
+    text-decoration: none;
+    color: #fff;
+}
+.nav__two--item>a{
+    padding-left: 8px;
+}
+.nav__two--item .nav__two--item__list{
+    list-style: none;
+    display: none;
+}
+
+#slider{
+    padding-top: 50px;
+    width: 100vw;
+    min-height: 400px;
+}
+#slider p{
+    height: 400px;
+    line-height: 400px;
+    text-align: center;
+    font-style: italic;
+    font-size: 32px;
+    font-weight: 600;
+}
+.chart-content{
+    background-color: #fff;
+    color: red;
+    font-size: 32px;
+    font-weight: 600;
+}
+.chart{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+.chart-layout {
+    width: 100vw;
+    margin: 36px auto 0 auto;
+    padding: 32px 0 0 0;
+    height: 320px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+.chart-layout__item{
+    width: 60px;
+    color: #fff;
+    text-align: center;
+    height: var(--percent);
+    background-color: #EF5122;
+    animation: growth ease-in .5s;
+    display: flex;
+    flex-direction: column;
+}
+.chart .month{
+    display: flex;
+    justify-content: space-around;
+}
+@keyframes growth{
+    from{
+        opacity: 0;
+        height: calc(var(--percent) / 2);
+    } to{
+        opacity: 1;
+        height: var(--percent);
+    }
+}
